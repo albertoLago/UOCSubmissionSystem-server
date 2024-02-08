@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Create Submissions Pool</title>
+    <link rel="stylesheet" type="text/css" href="css/create_pool.css">
+</head>
+<body>
+<div class="top-right-buttons">
+    <button onclick="window.history.back();" class="top-right-button">Go Back</button>
+    <a class="logout-link top-right-button" href="/logout">Logout</a>
+</div>
+<div sec:authorize="isAuthenticated()">
+    <form id="poolForm" action="/upload" method="post" enctype="multipart/form-data">
+        <h1 class="form-title">New Submission Pool</h1>
+        <label for="poolID">Pool ID:</label><br>
+        <input type="text" id="poolID" name="poolID" required><br>
+        <label for="zipFile">ZIP file:</label><br>
+        <input type="file" id="zipFile" name="zipFile" accept=".zip" required><br>
+        <label for="selectedDate">Date:</label><br>
+        <input type="date" id="selectedDate" name="selectedDate" required><br>
+        <input type="submit" value="Create Submission Pool">
+        <p id="message"></p>
+    </form>
+    <script src="js/create_pool.js"></script>
+</div>
+</body>
+</html>

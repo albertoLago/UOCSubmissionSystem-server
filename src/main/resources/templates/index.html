@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<h1>Welcome to UOC Submission System server</h1>
+<nav>
+    <ul>
+        <li><a class="button-style" href="create_pool.html">Create New Pool</a></li>
+        <li><button id="refreshButton" class="button-style">Refresh</button></li>
+    </ul>
+</nav>
+<table id="poolsTable">
+    <thead>
+    <tr>
+        <th>Pool ID</th>
+        <th>Path</th>
+        <th>Deadline</th>
+        <th>Active</th>
+        <th>Submissions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Data rows will be inserted here -->
+    </tbody>
+</table>
+<a class="logout-link" href="/logout">Logout</a>
+
+<script src="js/load_pools.js"></script>
+</body>
+</html>

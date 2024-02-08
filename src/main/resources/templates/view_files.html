@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Submissions</title>
+  <link rel="stylesheet" type="text/css" href="css/view_files.css">
+</head>
+<body>
+<h1>Viewing Submissions for Pool ID: <span id="poolId"></span></h1>
+<button id="refreshButton" class="button-style">Refresh</button>
+<button id="downloadAllButton" class="button-style">Download All</button>
+<div class="top-right-buttons">
+  <button onclick="goBack()" class="top-right-button">Go Back</button>
+  <a class="logout-link top-right-button" href="/logout">Logout</a>
+</div>
+<table id="filesTable">
+  <thead>
+  <tr>
+    <th>Submission Name</th>
+    <!-- Add more headers if you have more information to display for each file -->
+  </tr>
+  </thead>
+  <tbody id="fileList">
+  <!-- File names will be inserted here -->
+  </tbody>
+</table>
+
+<script src="js/load_files.js"></script>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  document.getElementById('refreshButton').addEventListener('click', function() {
+    location.reload();
+  });
+</script>
+</body>
+</html>
